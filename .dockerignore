@@ -1,0 +1,6 @@
+venv/
+mlartifacts 
+data
+mlruns
+Research 
+app.py 
