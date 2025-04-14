@@ -1,7 +1,6 @@
 import sys
 import os
 
-# Add the root directory to sys.path so that the import from main works
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from fastapi.testclient import TestClient
@@ -13,7 +12,7 @@ def test_home():
     """Test the /home GET endpoint."""
     response = client.get("/home")
     assert response.status_code == 200
-    assert response.json() == "Loan Defaulter Prediction"
+    assert response.json() == "Loan Defaulter Prediction API"
 
 def test_predict():
     """Test the /predict POST endpoint."""
