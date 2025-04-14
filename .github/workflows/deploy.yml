@@ -52,8 +52,11 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
-          docker stop loan-defaulter-app || true
-          docker rm loan-defaulter-app || true
-          docker run -d --name loan-defaulter-app -p 8080:1000 ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
+           docker pull --quiet ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
+           docker stop loan-defaulter-app || true
+           docker rm loan-defaulter-app || true
+           docker rmi ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest || true  
+           docker pull ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest         
+           docker run -d --name loan-defaulter-app -p 8080:1000 ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
+
 
