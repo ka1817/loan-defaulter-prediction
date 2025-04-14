@@ -5,7 +5,7 @@ import pandas as pd
 import uvicorn
 loaded_model = joblib.load('best_model_gb.pkl')
 
-app = FastAPI(title='Loan Defaulter Prediction11')
+app = FastAPI(title='Loan Defaulter Prediction API')
 
 class Prediction(BaseModel):
     person_age: int
