@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |
@@ -56,3 +56,4 @@ jobs:
           docker stop loan-defaulter-app || true
           docker rm loan-defaulter-app || true
           docker run -d --name loan-defaulter-app -p 8080:1000 ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
+
