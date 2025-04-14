@@ -3,7 +3,7 @@ name: Test, Build, and Deploy FastAPI app
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   test-build-deploy:
@@ -23,6 +23,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest
+
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
     - name: Run Tests
       run: |

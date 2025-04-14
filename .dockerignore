@@ -1,6 +1,9 @@
 venv/
-mlartifacts 
-data
-mlruns
-Research 
-app.py 
+
+mlartifacts/
+mlruns/
+
+data/
+Research/
+
+app.py
