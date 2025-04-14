@@ -55,4 +55,4 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
           docker stop loan-defaulter-app || true
           docker rm loan-defaulter-app || true
-          docker run -d --name loan-defaulter-app -p 80:1000 ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
+          docker run -d --name loan-defaulter-app -p 8080:1000 ${{ secrets.DOCKER_USERNAME }}/loan-defaulter-app:latest
