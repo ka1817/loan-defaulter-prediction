@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/562165793518660457/ea89d1fe56414bdca5adb47f6f97b9fc/artifacts
+end_time: 1744008967032
+entry_point_name: ''
+experiment_id: '562165793518660457'
+lifecycle_stage: active
+run_id: ea89d1fe56414bdca5adb47f6f97b9fc
+run_name: casual-swan-957
+run_uuid: ea89d1fe56414bdca5adb47f6f97b9fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744008915535
+status: 3
+tags: []
+user_id: saipr

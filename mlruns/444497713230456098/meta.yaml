@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/444497713230456098
+creation_time: 1744009036013
+experiment_id: '444497713230456098'
+last_update_time: 1744009036013
+lifecycle_stage: active
+name: loan_default_prediction_GBM
