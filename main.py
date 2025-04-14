@@ -21,7 +21,7 @@ class Prediction(BaseModel):
     cb_person_cred_hist_length: int
 @app.get('/home')
 def home():
-    return "Loan Defaulter Prediction"
+    return "Loan Defaulter Prediction API"
 @app.post('/predict')
 def predict(data: Prediction):
     input_data = pd.DataFrame([data.dict()])
